@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    background-color: #0d1117;
+    color: #c9d1d9;
+}
+
+.header{
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #161b22;
+    border-bottom: 1px solid #30363d;
+}
+
+.header h1{
+    color: #58a6ff;
+    font-size: 32px;
+}
+
+.dashboard{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 50px;
+    flex-wrap: wrap;
+}
+
+.dashboard p{
+    color: white;
+    text-align: center;
+}
+
+.api-card{
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 10px;
+    padding: 25px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.api-card h2{
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.status-badge{
+    display: inline-block;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+/* We will apply this class using JavaScript if the API passes */
+.pass{
+    background-color: rgba(35, 134, 54, 0.2);
+    color: #3fb950;
+    border: 1px solid #2ea043;
+}
+
+/* We will apply this class if the API fails */
+.fail {
+    background-color: rgba(248, 81, 73, 0.2);
+    color: #ff7b72;
+    border: 1px solid #f85149;
+}
+
+.time{
+    color: #8b949e;
+    font-size: 14px;
+}

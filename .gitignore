@@ -1,0 +1,12 @@
+# Node dependencies (These are huge and can be recreated by running 'npm install')
+node_modules/
+backend/node_modules/
+
+# Database files (We do not want to upload your personal test data to GitHub)
+*.db
+health_data.db
+backend/health_data.db
+
+# OS System files (Good practice to ignore these hidden system files)
+.DS_Store
+Thumbs.db
