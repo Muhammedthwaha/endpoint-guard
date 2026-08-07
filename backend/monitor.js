@@ -52,6 +52,21 @@ async function runHealthChecks() {
             }
         });
     }
+    // 6.  Database Cleanup - Keep only the latest 100 rows
+    const cleanupQuery = `
+        DELETE FROM api_health 
+        WHERE id NOT IN (
+            SELECT id FROM api_health ORDER BY id DESC LIMIT 100
+        )`;
+
+        db.run(cleanupQuery, [], (err) => {
+            if (err) {
+                console.error("Cleanup error:", err.message);
+            } else {
+                console.log("Database cleaned. Kept latest 100 rows.");
+            }
+        });
+
 }
 // Run the check immediately when the file starts
 runHealthChecks();
